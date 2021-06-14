@@ -26,7 +26,9 @@ interface EditControlProps {
     marker?: DrawOptions.MarkerOptions | boolean;
     circlemarker?: DrawOptions.CircleOptions | boolean;
   },
-
+  edit: {
+    remove: boolean,
+  },
 
   position: ControlPosition,
 }

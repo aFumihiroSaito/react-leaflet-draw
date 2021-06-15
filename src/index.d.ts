@@ -1,6 +1,6 @@
 import * as React from 'react';
-import type { DrawOptions, EditOptions, ControlPosition } from 'leaflet';
-
+import type { ControlPosition } from 'leaflet';
+import { DrawOptions } from 'leaflet-draw';
 
 interface EditControlProps {
   onEdited?: Function;

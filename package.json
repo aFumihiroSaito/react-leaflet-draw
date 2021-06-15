@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/alex3165/react-leaflet-draw.git"
+    "url": "git+https://git@github.com/aFumihiroSaito/react-leaflet-draw.git"
   },
   "files": [
     "dist",
@@ -34,9 +34,9 @@
   "author": "Alexandre Rieux",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/alex3165/react-leaflet-draw/issues"
+    "url": "https://github.com/aFumihiroSaito/react-leaflet-draw/issues"
   },
-  "homepage": "https://github.com/alex3165/react-leaflet-draw#readme",
+  "homepage": "https://github.com/aFumihiroSaito/react-leaflet-draw#readme",
   "types": "src/index.d.ts",
   "peerDependencies": {
     "leaflet": "^1.3.0",

@@ -1,132 +1,18 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("react"), require("leaflet"), require("leaflet-draw"));
+		module.exports = factory(require("leaflet-draw"), require("react"), require("leaflet"));
 	else if(typeof define === 'function' && define.amd)
-		define(["react", "leaflet", "leaflet-draw"], factory);
+		define(["leaflet-draw", "react", "leaflet"], factory);
 	else if(typeof exports === 'object')
-		exports["ReactLeaflet"] = factory(require("react"), require("leaflet"), require("leaflet-draw"));
+		exports["ReactLeaflet"] = factory(require("leaflet-draw"), require("react"), require("leaflet"));
 	else
-		root["ReactLeaflet"] = factory(root["React"], root["L"], root["L"]);
-})(window, function(__WEBPACK_EXTERNAL_MODULE__1__, __WEBPACK_EXTERNAL_MODULE__2__, __WEBPACK_EXTERNAL_MODULE__6__) {
-return /******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
-/******/ })
-/************************************************************************/
-/******/ ([
-/* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+		root["ReactLeaflet"] = factory(root["L"], root["React"], root["L"]);
+})(self, (__WEBPACK_EXTERNAL_MODULE__654__, __WEBPACK_EXTERNAL_MODULE__329__, __WEBPACK_EXTERNAL_MODULE__708__) => {
+return /******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
 
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-if (false) { var throwOnDirectAccess, ReactIs; } else {
-  // By explicitly using `prop-types` you are opting into new production behavior.
-  // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(4)();
-}
-
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE__1__;
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE__2__;
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ 704:
+/***/ ((module) => {
 
 "use strict";
 
@@ -139,40 +25,35 @@ module.exports = function equal(a, b) {
   if (a === b) return true;
 
   if (a && b && typeof a == 'object' && typeof b == 'object') {
-    var arrA = isArray(a)
-      , arrB = isArray(b)
-      , i
-      , length
-      , key;
+    var arrA = isArray(a),
+        arrB = isArray(b),
+        i,
+        length,
+        key;
 
     if (arrA && arrB) {
       length = a.length;
       if (length != b.length) return false;
-      for (i = length; i-- !== 0;)
-        if (!equal(a[i], b[i])) return false;
+
+      for (i = length; i-- !== 0;) if (!equal(a[i], b[i])) return false;
+
       return true;
     }
 
     if (arrA != arrB) return false;
-
-    var dateA = a instanceof Date
-      , dateB = b instanceof Date;
+    var dateA = a instanceof Date,
+        dateB = b instanceof Date;
     if (dateA != dateB) return false;
     if (dateA && dateB) return a.getTime() == b.getTime();
-
-    var regexpA = a instanceof RegExp
-      , regexpB = b instanceof RegExp;
+    var regexpA = a instanceof RegExp,
+        regexpB = b instanceof RegExp;
     if (regexpA != regexpB) return false;
     if (regexpA && regexpB) return a.toString() == b.toString();
-
     var keys = keyList(a);
     length = keys.length;
+    if (length !== keyList(b).length) return false;
 
-    if (length !== keyList(b).length)
-      return false;
-
-    for (i = length; i-- !== 0;)
-      if (!hasProp.call(b, keys[i])) return false;
+    for (i = length; i-- !== 0;) if (!hasProp.call(b, keys[i])) return false;
 
     for (i = length; i-- !== 0;) {
       key = keys[i];
@@ -182,13 +63,13 @@ module.exports = function equal(a, b) {
     return true;
   }
 
-  return a!==a && b!==b;
+  return a !== a && b !== b;
 };
 
-
 /***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
+
+/***/ 433:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 /**
@@ -199,33 +80,36 @@ module.exports = function equal(a, b) {
  */
 
 
-
-var ReactPropTypesSecret = __webpack_require__(5);
+var ReactPropTypesSecret = __webpack_require__(642);
 
 function emptyFunction() {}
+
 function emptyFunctionWithReset() {}
+
 emptyFunctionWithReset.resetWarningCache = emptyFunction;
 
-module.exports = function() {
+module.exports = function () {
   function shim(props, propName, componentName, location, propFullName, secret) {
     if (secret === ReactPropTypesSecret) {
       // It is still safe when called from React.
       return;
     }
-    var err = new Error(
-      'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
-      'Use PropTypes.checkPropTypes() to call them. ' +
-      'Read more at http://fb.me/use-check-prop-types'
-    );
+
+    var err = new Error('Calling PropTypes validators directly is not supported by the `prop-types` package. ' + 'Use PropTypes.checkPropTypes() to call them. ' + 'Read more at http://fb.me/use-check-prop-types');
     err.name = 'Invariant Violation';
     throw err;
-  };
+  }
+
+  ;
   shim.isRequired = shim;
+
   function getShim() {
     return shim;
-  };
-  // Important!
+  }
+
+  ; // Important!
   // Keep this list in sync with production version in `./factoryWithTypeCheckers.js`.
+
   var ReactPropTypes = {
     array: shim,
     bool: shim,
@@ -234,7 +118,6 @@ module.exports = function() {
     object: shim,
     string: shim,
     symbol: shim,
-
     any: shim,
     arrayOf: getShim,
     element: shim,
@@ -246,20 +129,34 @@ module.exports = function() {
     oneOfType: getShim,
     shape: getShim,
     exact: getShim,
-
     checkPropTypes: emptyFunctionWithReset,
     resetWarningCache: emptyFunction
   };
-
   ReactPropTypes.PropTypes = ReactPropTypes;
-
   return ReactPropTypes;
 };
 
+/***/ }),
+
+/***/ 74:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+if (false) { var throwOnDirectAccess, ReactIs; } else {
+  // By explicitly using `prop-types` you are opting into new production behavior.
+  // http://fb.me/prop-types-in-prod
+  module.exports = __webpack_require__(433)();
+}
 
 /***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
+
+/***/ 642:
+/***/ ((module) => {
 
 "use strict";
 /**
@@ -270,50 +167,132 @@ module.exports = function() {
  */
 
 
-
 var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
-
 module.exports = ReactPropTypesSecret;
 
+/***/ }),
+
+/***/ 708:
+/***/ ((module) => {
+
+"use strict";
+module.exports = __WEBPACK_EXTERNAL_MODULE__708__;
 
 /***/ }),
-/* 6 */
-/***/ (function(module, exports) {
 
-module.exports = __WEBPACK_EXTERNAL_MODULE__6__;
+/***/ 654:
+/***/ ((module) => {
+
+"use strict";
+module.exports = __WEBPACK_EXTERNAL_MODULE__654__;
 
 /***/ }),
-/* 7 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+/***/ 329:
+/***/ ((module) => {
+
+"use strict";
+module.exports = __WEBPACK_EXTERNAL_MODULE__329__;
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+(() => {
 "use strict";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
-__webpack_require__.d(__webpack_exports__, "EditControl", function() { return /* reexport */ src_EditControl; });
+__webpack_require__.d(__webpack_exports__, {
+  "EditControl": () => (/* reexport */ src_EditControl)
+});
 
 // EXTERNAL MODULE: ./node_modules/prop-types/index.js
-var prop_types = __webpack_require__(0);
-
+var prop_types = __webpack_require__(74);
 // EXTERNAL MODULE: external {"amd":"leaflet-draw","commonjs":"leaflet-draw","commonjs2":"leaflet-draw","root":"L"}
-var external_amd_leaflet_draw_commonjs_leaflet_draw_commonjs2_leaflet_draw_root_L_ = __webpack_require__(6);
-
+var external_amd_leaflet_draw_commonjs_leaflet_draw_commonjs2_leaflet_draw_root_L_ = __webpack_require__(654);
 // EXTERNAL MODULE: ./node_modules/fast-deep-equal/index.js
-var fast_deep_equal = __webpack_require__(3);
+var fast_deep_equal = __webpack_require__(704);
 var fast_deep_equal_default = /*#__PURE__*/__webpack_require__.n(fast_deep_equal);
-
 // EXTERNAL MODULE: external {"amd":"react","commonjs":"react","commonjs2":"react","root":"React"}
-var external_amd_react_commonjs_react_commonjs2_react_root_React_ = __webpack_require__(1);
+var external_amd_react_commonjs_react_commonjs2_react_root_React_ = __webpack_require__(329);
 var external_amd_react_commonjs_react_commonjs2_react_root_React_default = /*#__PURE__*/__webpack_require__.n(external_amd_react_commonjs_react_commonjs2_react_root_React_);
-
-// CONCATENATED MODULE: ./node_modules/@react-leaflet/core/esm/context.js
+;// CONCATENATED MODULE: ./node_modules/@react-leaflet/core/esm/context.js
 
 const CONTEXT_VERSION = 1;
-const LeafletContext = /*#__PURE__*/Object(external_amd_react_commonjs_react_commonjs2_react_root_React_["createContext"])(null);
+const LeafletContext = /*#__PURE__*/(0,external_amd_react_commonjs_react_commonjs2_react_root_React_.createContext)(null);
 const LeafletProvider = LeafletContext.Provider;
 function useLeafletContext() {
-  const context = Object(external_amd_react_commonjs_react_commonjs2_react_root_React_["useContext"])(LeafletContext);
+  const context = (0,external_amd_react_commonjs_react_commonjs2_react_root_React_.useContext)(LeafletContext);
 
   if (context == null) {
     throw new Error('No context provided: useLeafletContext() can only be used in a descendant of <MapContainer>');
@@ -322,10 +301,9 @@ function useLeafletContext() {
   return context;
 }
 // EXTERNAL MODULE: external {"amd":"leaflet","commonjs":"leaflet","commonjs2":"leaflet","root":"L"}
-var external_amd_leaflet_commonjs_leaflet_commonjs2_leaflet_root_L_ = __webpack_require__(2);
+var external_amd_leaflet_commonjs_leaflet_commonjs2_leaflet_root_L_ = __webpack_require__(708);
 var external_amd_leaflet_commonjs_leaflet_commonjs2_leaflet_root_L_default = /*#__PURE__*/__webpack_require__.n(external_amd_leaflet_commonjs_leaflet_commonjs2_leaflet_root_L_);
-
-// CONCATENATED MODULE: ./src/EditControl.js
+;// CONCATENATED MODULE: ./src/EditControl.js
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -356,8 +334,8 @@ var eventHandlers = {
 
 function EditControl(props) {
   var context = useLeafletContext();
-  var drawRef = Object(external_amd_react_commonjs_react_commonjs2_react_root_React_["useRef"])();
-  var propsRef = Object(external_amd_react_commonjs_react_commonjs2_react_root_React_["useRef"])(props);
+  var drawRef = (0,external_amd_react_commonjs_react_commonjs2_react_root_React_.useRef)();
+  var propsRef = (0,external_amd_react_commonjs_react_commonjs2_react_root_React_.useRef)(props);
 
   var onDrawCreate = function onDrawCreate(e) {
     var onCreated = props.onCreated;
@@ -366,7 +344,7 @@ function EditControl(props) {
     onCreated && onCreated(e);
   };
 
-  external_amd_react_commonjs_react_commonjs2_react_root_React_default.a.useEffect(function () {
+  external_amd_react_commonjs_react_commonjs2_react_root_React_default().useEffect(function () {
     var map = context.map;
     var onMounted = props.onMounted;
 
@@ -383,12 +361,12 @@ function EditControl(props) {
       });
     }
 
-    map.on(external_amd_leaflet_commonjs_leaflet_commonjs2_leaflet_root_L_default.a.Draw.Event.CREATED, onDrawCreate);
+    map.on((external_amd_leaflet_commonjs_leaflet_commonjs2_leaflet_root_L_default()).Draw.Event.CREATED, onDrawCreate);
     drawRef.current = createDrawElement(props, context);
     map.addControl(drawRef.current);
     onMounted && onMounted(drawRef.current);
     return function () {
-      map.off(external_amd_leaflet_commonjs_leaflet_commonjs2_leaflet_root_L_default.a.Draw.Event.CREATED, onDrawCreate);
+      map.off((external_amd_leaflet_commonjs_leaflet_commonjs2_leaflet_root_L_default()).Draw.Event.CREATED, onDrawCreate);
 
       for (var _key in eventHandlers) {
         if (props[_key]) {
@@ -397,7 +375,7 @@ function EditControl(props) {
       }
     };
   }, []);
-  external_amd_react_commonjs_react_commonjs2_react_root_React_default.a.useEffect(function () {
+  external_amd_react_commonjs_react_commonjs2_react_root_React_default().useEffect(function () {
     if (fast_deep_equal_default()(props.draw, propsRef.current.draw) && fast_deep_equal_default()(props.edit, propsRef.current.edit) && props.position === propsRef.current.position) {
       return false;
     }
@@ -432,41 +410,43 @@ function createDrawElement(props, context) {
     options.position = position;
   }
 
-  return new external_amd_leaflet_commonjs_leaflet_commonjs2_leaflet_root_L_["Control"].Draw(options);
+  return new external_amd_leaflet_commonjs_leaflet_commonjs2_leaflet_root_L_.Control.Draw(options);
 }
 
 EditControl.propTypes = _objectSpread(_objectSpread({}, Object.keys(eventHandlers).reduce(function (acc, val) {
-  acc[val] = prop_types["PropTypes"].func;
+  acc[val] = prop_types.PropTypes.func;
   return acc;
 }, {})), {}, {
-  onCreated: prop_types["PropTypes"].func,
-  onMounted: prop_types["PropTypes"].func,
-  draw: prop_types["PropTypes"].shape({
-    polyline: prop_types["PropTypes"].oneOfType([prop_types["PropTypes"].object, prop_types["PropTypes"].bool]),
-    polygon: prop_types["PropTypes"].oneOfType([prop_types["PropTypes"].object, prop_types["PropTypes"].bool]),
-    rectangle: prop_types["PropTypes"].oneOfType([prop_types["PropTypes"].object, prop_types["PropTypes"].bool]),
-    circle: prop_types["PropTypes"].oneOfType([prop_types["PropTypes"].object, prop_types["PropTypes"].bool]),
-    marker: prop_types["PropTypes"].oneOfType([prop_types["PropTypes"].object, prop_types["PropTypes"].bool])
+  onCreated: prop_types.PropTypes.func,
+  onMounted: prop_types.PropTypes.func,
+  draw: prop_types.PropTypes.shape({
+    polyline: prop_types.PropTypes.oneOfType([prop_types.PropTypes.object, prop_types.PropTypes.bool]),
+    polygon: prop_types.PropTypes.oneOfType([prop_types.PropTypes.object, prop_types.PropTypes.bool]),
+    rectangle: prop_types.PropTypes.oneOfType([prop_types.PropTypes.object, prop_types.PropTypes.bool]),
+    circle: prop_types.PropTypes.oneOfType([prop_types.PropTypes.object, prop_types.PropTypes.bool]),
+    marker: prop_types.PropTypes.oneOfType([prop_types.PropTypes.object, prop_types.PropTypes.bool])
   }),
-  edit: prop_types["PropTypes"].shape({
-    edit: prop_types["PropTypes"].oneOfType([prop_types["PropTypes"].object, prop_types["PropTypes"].bool]),
-    remove: prop_types["PropTypes"].oneOfType([prop_types["PropTypes"].object, prop_types["PropTypes"].bool]),
-    poly: prop_types["PropTypes"].oneOfType([prop_types["PropTypes"].object, prop_types["PropTypes"].bool]),
-    allowIntersection: prop_types["PropTypes"].bool
+  edit: prop_types.PropTypes.shape({
+    edit: prop_types.PropTypes.oneOfType([prop_types.PropTypes.object, prop_types.PropTypes.bool]),
+    remove: prop_types.PropTypes.oneOfType([prop_types.PropTypes.object, prop_types.PropTypes.bool]),
+    poly: prop_types.PropTypes.oneOfType([prop_types.PropTypes.object, prop_types.PropTypes.bool]),
+    allowIntersection: prop_types.PropTypes.bool
   }),
-  position: prop_types["PropTypes"].oneOf(['topright', 'topleft', 'bottomright', 'bottomleft']),
-  leaflet: prop_types["PropTypes"].shape({
-    map: prop_types["PropTypes"].instanceOf(external_amd_leaflet_commonjs_leaflet_commonjs2_leaflet_root_L_["Map"]),
-    layerContainer: prop_types["PropTypes"].shape({
-      addLayer: prop_types["PropTypes"].func.isRequired,
-      removeLayer: prop_types["PropTypes"].func.isRequired
+  position: prop_types.PropTypes.oneOf(['topright', 'topleft', 'bottomright', 'bottomleft']),
+  leaflet: prop_types.PropTypes.shape({
+    map: prop_types.PropTypes.instanceOf(external_amd_leaflet_commonjs_leaflet_commonjs2_leaflet_root_L_.Map),
+    layerContainer: prop_types.PropTypes.shape({
+      addLayer: prop_types.PropTypes.func.isRequired,
+      removeLayer: prop_types.PropTypes.func.isRequired
     })
   })
 });
-/* harmony default export */ var src_EditControl = (EditControl);
-// CONCATENATED MODULE: ./src/index.js
+/* harmony default export */ const src_EditControl = (EditControl);
+;// CONCATENATED MODULE: ./src/index.js
 
+})();
 
-/***/ })
-/******/ ]);
+/******/ 	return __webpack_exports__;
+/******/ })()
+;
 });
